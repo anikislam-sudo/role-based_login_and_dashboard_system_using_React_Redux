@@ -9,8 +9,6 @@ A modern React application built with Vite.
 - 🎨 **Tailwind** - Styling framework
 - 🛣️ **React Router** - Client-side routing
 
-
-
 ## 📋 Prerequisites
 
 - Node.js (v16 or higher)
@@ -19,6 +17,7 @@ A modern React application built with Vite.
 ## 🛠️ Installation
 
 1. Navigate to the project directory:
+
    ```bash
    cd finobytes
    ```
@@ -31,38 +30,84 @@ A modern React application built with Vite.
 ## 🏃‍♂️ Running the Application
 
 ### Development Mode
+
 ```bash
 npm run dev
 ```
+
 The app will be available at `http://localhost:5173`
 
 ### Production Build
+
 ```bash
 npm run build
 ```
 
 ### Preview Production Build
+
 ```bash
 npm run preview
 ```
 
 ## 📁 Project Structure
 
-```
+````
 finobytes/
-├── public/
+│
+├── public/                 # Static assets served directly
+│   └── vite.svg
+│
 ├── src/
-│   ├── components/        # Reusable components
-│   ├── pages/            # Page components
-│   ├── hooks/            # Custom React hooks
-│   ├── store/            # State management
-│   ├── utils/            # Utility functions
-│   ├── assets/          # Static assets
-│   ├── App.jsx           # Main App component
-│   └── main.jsx          # Entry point
-├── vite.config.js        # Vite configuration
-└── package.json
-```
+│   ├── assets/             # Images, icons, SVGs, fonts
+│   │   └── react.svg
+│   │
+│   ├── components/         # Reusable UI components
+│   │   ├── Auth/           # Auth related components
+│   │   │   └── AuthCard.jsx
+│   │   ├── Layout.jsx
+│   │   └── Loader.jsx
+│   │
+│   ├── pages/              # Page-level components
+│   │   ├── Dashboard/
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── MemberDashboard.jsx
+│   │   │   └── MerchantDashboard.jsx
+│   │   │
+│   │   ├── Login/
+│   │   │   ├── AdminLogin.jsx
+│   │   │   ├── MemberLogin.jsx
+│   │   │   └── MerchantLogin.jsx
+│   │   │
+│   │   └── Register/
+│   │       ├── AdminRegister.jsx
+│   │       ├── MemberRegister.jsx
+│   │       └── MerchantRegister.jsx
+│   │
+│   ├── redux/              # Redux store setup
+│   │   ├── slices/
+│   │   │   ├── authSlice.js
+│   │   │   ├── dataSlice.js
+│   │   │   └── loaderSlice.js
+│   │   └── store/
+│   │       └── index.js
+│   │
+│   ├── routes/             # React-router components
+│   │   └── ProtectedRoute.jsx
+│   │
+│   ├── hooks/              # Custom hooks
+│   │
+│   ├── utils/              # Utility functions
+│   │
+│   ├── data/               # Static data or JSON files
+│   │   └── dummyData.json
+│   │
+│   ├── App.jsx             # Root component
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global styles
+│
+├── package.json
+└── vite.config.js
+
 
 ## 🎨 Styling
 
@@ -85,9 +130,10 @@ This project uses **Tailwind** for styling:
 ```bash
 npm install -g vercel
 vercel --prod
-```
+````
 
 ### Netlify
+
 ```bash
 npm run build
 # Upload dist/ folder to Netlify
