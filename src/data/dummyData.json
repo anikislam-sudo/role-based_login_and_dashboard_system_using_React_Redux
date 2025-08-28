@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "Member",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "Merchant",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Bob Wilson",
+      "email": "bob@example.com",
+      "role": "Member",
+      "status": "Inactive"
+    }
+  ],
+  "purchases": [
+    {
+      "id": 1,
+      "customer": "Alice Brown",
+      "amount": 150.0,
+      "status": "Pending",
+      "date": "2024-08-27"
+    },
+    {
+      "id": 2,
+      "customer": "Charlie Davis",
+      "amount": 89.99,
+      "status": "Pending",
+      "date": "2024-08-27"
+    },
+    {
+      "id": 3,
+      "customer": "Diana Miller",
+      "amount": 220.5,
+      "status": "Approved",
+      "date": "2024-08-26"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Alice Brown",
+      "email": "alice@example.com",
+      "phone": "+1234567890",
+      "points": 1250
+    },
+    {
+      "id": 2,
+      "name": "Charlie Davis",
+      "email": "charlie@example.com",
+      "phone": "+1234567891",
+      "points": 890
+    },
+    {
+      "id": 3,
+      "name": "Diana Miller",
+      "email": "diana@example.com",
+      "phone": "+1234567892",
+      "points": 2100
+    }
+  ],
+  "contributionRate": 5.5,
+  "notifications": [
+    {
+      "id": 1,
+      "message": "New approval request from Alice Brown",
+      "time": "2 hours ago",
+      "type": "approval"
+    },
+    {
+      "id": 2,
+      "message": "Purchase approved for Charlie Davis",
+      "time": "5 hours ago",
+      "type": "info"
+    },
+    {
+      "id": 3,
+      "message": "Contribution rate updated",
+      "time": "1 day ago",
+      "type": "update"
+    }
+  ],
+  "memberPoints": {
+    "total": 2450,
+    "earned": 450,
+    "redeemed": 200,
+    "transactions": [
+      {
+        "id": 1,
+        "type": "Earned",
+        "amount": 50,
+        "description": "Purchase at Store A",
+        "date": "2024-08-27"
+      },
+      {
+        "id": 2,
+        "type": "Redeemed",
+        "amount": -25,
+        "description": "Discount applied",
+        "date": "2024-08-26"
+      },
+      {
+        "id": 3,
+        "type": "Earned",
+        "amount": 100,
+        "description": "Purchase at Store B",
+        "date": "2024-08-25"
+      }
+    ]
+  }
+}
